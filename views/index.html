@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Test</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="../css/index.css">
+  <link rel="stylesheet" href="../css/font-awesome.min.css">
+</head>
+
+<body>
+  <div class="title">YOUR TASK</div>
+  <div id="todo_content" class="content">
+    <input id="input_box" type="text" v-model="user_input" onblur="this.focus()" autofocus onfocus="this.value=''" v-on:keyup.13="submit">
+    <div class="todo_list_wrapper">
+
+      <todo-item v-for="item in groceryList" v-bind:todo="item" v-bind:key="item.id">
+      </todo-item>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.0.0.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+
+  <template id="todo-template">
+    <div class="todo_box_wrapper" v-if="todo.text">
+      <div class="todo_title" v-bind:class="{todo_done: todo.done}">
+        <i class="fa fa-trash" v-on:click.n="removetodo(todo)"></i>
+      </div>
+      <div class="todo_box" v-on:click="todo.done = !todo.done" v-bind:class="{todo_done_bg: todo.done}">
+        <span v-bind:class="{cross: todo.done}">{{todo.text}}</span>
+      </div>
+    </div>
+  </template>
+
+  <script>
+    // export default {
+    //   name: 'todo-template',
+    //   methods: {
+    //     removetodo: function () {
+    //       console.log('test');
+    //     }
+    //   },
+    //   component: '#todo-template'
+    // }
+
+  </script>
+  <script src="../js/index.js"></script>
+
+
+</body>
+
+</html>

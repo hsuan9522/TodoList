@@ -1,0 +1,69 @@
+body {
+  background: #EDEADC; }
+
+.title {
+  text-align: center;
+  font-size: 30px;
+  border-bottom: 1px solid #D4D3CA;
+  padding: 10px 0 15px; }
+
+.content {
+  text-align: center;
+  padding-top: 30px; }
+  .content #input_box {
+    display: block;
+    margin: 0 auto;
+    font-size: 16px;
+    border-radius: 30px;
+    height: 35px;
+    width: 32%;
+    padding-left: 10px; }
+    .content #input_box:focus {
+      outline: none !important; }
+
+.todo_box_wrapper {
+  display: inline-block;
+  width: 37%;
+  margin: 3%; }
+  .todo_box_wrapper .todo_title {
+    height: 30px;
+    background: #35C7A8;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+    -webkit-justify-content: flex-end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding-right: 10px; }
+  .todo_box_wrapper .todo_box {
+    display: -webkit-inline-box;
+    display: -webkit-inline-flex;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    background: #fff;
+    overflow-y: auto;
+    text-align: left;
+    width: 100%;
+    height: 90px; }
+  .todo_box_wrapper span {
+    word-break: break-all;
+    padding: 0px 30% 0 20px;
+    font-size: 20px; }
+  .todo_box_wrapper .todo_done {
+    background: #EE8974; }
+  .todo_box_wrapper .todo_done_bg {
+    background: #fff url("../images/DONE.png") right no-repeat;
+    background-size: 28%; }
+
+.cross {
+  text-decoration: line-through; }
